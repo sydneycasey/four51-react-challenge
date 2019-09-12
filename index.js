@@ -23,10 +23,6 @@ class App extends Component {
     };
   }
 
-  getPercentage(restaurantVotes, totalVotes) {
-    return Math.round(restaurantVotes / totalVotes * 100);
-  };
-
   handleRestaurantVote(index) {
     const restaurant = this.state.restaurants[index];
     this.setState(prevState => ({
@@ -36,6 +32,11 @@ class App extends Component {
         votes: restaurant.votes++
       }
     }));
+  };
+
+  // returns percentage of votes for each restaurant
+  getPercentage(restaurantVotes, totalVotes) {
+    return Math.round(restaurantVotes / totalVotes * 100) + "%";
   };
 
   render() {
