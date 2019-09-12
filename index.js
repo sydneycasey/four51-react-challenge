@@ -17,10 +17,15 @@ class App extends Component {
   constructor() {
     super();
     this.handleRestaurantVote = this.handleRestaurantVote.bind(this);
+    this.getPercentage = this.getPercentage.bind(this);
     this.state = {
       restaurants
     };
   }
+
+  getPercentage(restaurantVotes, totalVotes) {
+    return Math.round(restaurantVotes / totalVotes * 100);
+  };
 
   handleRestaurantVote(index) {
     const restaurant = this.state.restaurants[index];
@@ -38,7 +43,7 @@ class App extends Component {
       <div>
         <h1>Where Should We Eat Lunch Today?</h1>
         <Restaurants restaurants={this.state.restaurants}/>
-        <Results restaurants={this.state.restaurants}/>        
+        <Results restaurants={this.state.restaurants} percentage = {this.getPercentage}/>        
         <Vote restaurants={this.state.restaurants} castVote={this.handleRestaurantVote}/>
       </div>
     );
