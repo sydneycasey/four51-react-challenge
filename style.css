@@ -1,3 +1,71 @@
 h1, p {
-  font-family: Lato;
+  font-family: 'Dosis', sans-serif;
+  margin-bottom: 35px;
+  color: DarkSlateGrey;	
+  padding-bottom: 20px;
+  border-bottom: solid black 1px;
+}
+
+body {
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+background: linear-gradient(0deg, rgba(255,176,109,1) 0%, rgba(255,247,231,1) 100%);
+}
+
+th {
+  color: cornflowerblue;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+}
+
+table {
+  margin-bottom: 35px;
+  margin-top: 10px;
+}
+
+li:hover {
+  cursor: pointer;
+  color: crimson;
+}
+
+#text{
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.btn {
+  background-color: cornflowerblue;
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: indigo;
+  transition-duration: 0.4s;
+}
+
+#submit-btn {
+  color: white;
+  background-color: cornflowerblue;
+  border-radius: 25px;
+}
+
+#submit-btn:hover {
+  background-color: indigo;
+  transition-duration: 0.4s;
+}
+
+#add-form {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+#restaurant-list {
+  margin-bottom: 35px;
 }

@@ -25,7 +25,7 @@ const Results = props => {
         <thead>
           <tr>
             <th>Rank</th>
-            <th>Restaruant</th>
+            <th>Restaurant</th>
             <th>Votes</th>
             <th>Total</th>
           </tr>

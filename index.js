@@ -24,17 +24,19 @@ class App extends Component {
     };
   }
 
-removeRestaurant(name){
+  // removes selected restaurant from state
+  removeRestaurant(name){
     this.setState({
-        restaurants: this.state.restaurants.filter(el => el.name !== name)
-    })
-}
+      restaurants: this.state.restaurants.filter(restaurant => restaurant.name !== name)
+    });
+  };
 
+  // adds new restaurant to state
   addRestaurant(name, cuisine) {
     let restaurants = this.state.restaurants;
     restaurants.push({name: name, votes: 0, cuisine: cuisine});
     this.setState({restaurants: restaurants});
-  }
+  };
 
   handleRestaurantVote(index) {
     const restaurant = this.state.restaurants[index];
