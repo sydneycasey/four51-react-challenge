@@ -7,7 +7,7 @@ import Vote from './Vote';
 import './style.css';
 
 const restaurants = [
-  { name: "NafNaf",  votes: 4, cuisine: "Medeterranian" },
+  { name: "NafNaf",  votes: 4, cuisine: "Mediterranean" },
   { name: "Pizza Luce", votes: 6, cuisine: "Italian" },
   { name: "Whole Foods",  votes: 2, cuisine: "Salads" }
 ];

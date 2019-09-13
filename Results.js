@@ -21,7 +21,7 @@ const Results = props => {
   return (
     <React.Fragment>
       <h2>Live Results</h2>
-      <table>
+      <table id="results-table">
         <thead>
           <tr>
             <th>Rank</th>
