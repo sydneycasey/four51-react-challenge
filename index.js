@@ -12,15 +12,28 @@ const restaurants = [
   { name: "Whole Foods",  votes: 2, cuisine: "Salads" }
 ];
 
-
 class App extends Component {
   constructor() {
     super();
     this.handleRestaurantVote = this.handleRestaurantVote.bind(this);
     this.getPercentage = this.getPercentage.bind(this);
+    this.addRestaurant = this.addRestaurant.bind(this);
+    this.removeRestaurant = this.removeRestaurant.bind(this);
     this.state = {
       restaurants
     };
+  }
+
+removeRestaurant(name){
+    this.setState({
+        restaurants: this.state.restaurants.filter(el => el.name !== name)
+    })
+}
+
+  addRestaurant(name, cuisine) {
+    let restaurants = this.state.restaurants;
+    restaurants.push({name: name, votes: 0, cuisine: cuisine});
+    this.setState({restaurants: restaurants});
   }
 
   handleRestaurantVote(index) {
@@ -43,7 +56,7 @@ class App extends Component {
     return (
       <div>
         <h1>Where Should We Eat Lunch Today?</h1>
-        <Restaurants restaurants={this.state.restaurants}/>
+        <Restaurants restaurants={this.state.restaurants} addNew = {this.addRestaurant} remove = {this.removeRestaurant}/>
         <Results restaurants={this.state.restaurants} percentage = {this.getPercentage}/>        
         <Vote restaurants={this.state.restaurants} castVote={this.handleRestaurantVote}/>
       </div>
